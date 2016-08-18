@@ -10,6 +10,7 @@
       } 
     },
     paths:{
+      "jquery":"js/lib/jquery",
       "text":"js/require-plugin/text",
       "underscore":"js/require-plugin/underscore",
       "tpl":"js/require-plugin/underscore-tpl"
@@ -24,10 +25,9 @@
 
 <script>
   require(['./app'], function(){});
-  require(['components/popup/popup'], function(popupHTML) {
-    var div = document.createElement('div');
-    div.innerHTML = popupHTML;
-    document.body.appendChild(div);
-    alert(div.childNodes[0].offsetWidth == 340 ? 'Style query passed' : 'Style query failed');
+  require(['components/popup/popup'], function(popup) {
+    
+    document.body.appendChild(popup.getHtml());
+    
   });
 </script>

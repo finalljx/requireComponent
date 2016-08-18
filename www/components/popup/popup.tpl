@@ -1,5 +1,5 @@
 <ul>
 <% _.forEach(users, function(user) { %>
-	<li><%= user %></li>
+	<li ><%= user.name %></li>
 <% }); %>
 </ul>
