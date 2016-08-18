@@ -1,0 +1,2 @@
+# requireComponent
+基于require和understore的组件化
